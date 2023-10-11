@@ -2,11 +2,11 @@
 /**
  * print_sign - prints sign of a number
  * @n: character to be checked
- * Return: 1 if c is greater than zero, -1 if number is negative and 0 for anything else
+ * Return: 1 if num is poistive, -1 if num is negative and 0 for anything else
  */
 int print_sign(int n)
 {
-if ( n> 0)
+if (n > 0)
 {
 _putchar(43);
 return (1);

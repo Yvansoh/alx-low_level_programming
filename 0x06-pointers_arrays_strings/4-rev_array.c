@@ -18,7 +18,9 @@ void reverse_array(int *a, int n)
 		temporary = a[counter];
 		a[counter] = a[n];
 		a[n] = temporary;
+
+		counter++;
+		n--;
 	}
-	return (void);
 }
 

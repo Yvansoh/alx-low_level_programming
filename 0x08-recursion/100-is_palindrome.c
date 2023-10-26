@@ -4,23 +4,29 @@
  * is_palindrome - Checks if a string is a palindrome
  * @s: Pointer to the string to check
  *
- * Return: 1 if the string is a palindrome, 0 otherwise
+ * Return: true if the string is a palindrome, false otherwise
  */
-
-int is_palindrome(char *s)
+bool is_palindrome(char *s, int start, int end)
 {
-	int length = 0;
-	int i, j;
+	if (start == end)
+		return (true);
+	if (s[start] != s[end])
+		return (false);
+	return (is_palindrome(s, start + 1, end - 1:));
+}
 
-	if (s == NULL)
-		return (0);
-	while (s[length] != '\0')
-		length++;
-	for (i = 0, j = length - 1; i < j; i++, j--)
-	{
-		if (s[i] != s[j])
-			return (0);
-	}
-return (1);
+int main(void)
+{
+	int r;
+	char str[] = "mom";
+	int len = strlen(str);
+	bool is_palindrome_result;
+	is_palindrome_result = is_palindrome(str, 0, len - 1);
+
+	if (is_palindrome_result)
+		printf("'%s' is a palindrome.\n", str);
+	else
+		printf("'%s' is not a palindrome.\n", str);
+	return (0);
 }
 

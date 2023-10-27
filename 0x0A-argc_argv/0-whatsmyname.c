@@ -2,16 +2,13 @@
 #include <stdio.h>
 
 /**
- * whatsmyname.c - prints program name
  * main - entry point
- * @argc: arguement count
- * @argv: array of arguements
+ * __FILE__ - macro to get name of source file to print
  * Return: 0 if successful
  */
 
-int main(int argc, char *argv[]);
+int main(void);
 {
-	(void)argc;
-	printf("%s\n", argv[0]);
+	printf("%s\n", __FILE__);
 	return (0);
 }

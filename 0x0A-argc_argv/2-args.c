@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - entry point of the program
+ * main - Entry point of the program
  * @argc: number of arguements
  * @argv: array of arguements
  *

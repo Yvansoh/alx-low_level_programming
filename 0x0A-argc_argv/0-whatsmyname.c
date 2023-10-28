@@ -10,13 +10,6 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-
-	printf("Arguement count (argc) is: %d\n", argc);
-
-	for (i = 0; i < argc; i++)
-	{
-		printf("The arguement passesd is: %s\n", argv[0]);
-	}
+	printf("The arguement passesd is: %s\n", argv[0]);
 	return (0);
 }

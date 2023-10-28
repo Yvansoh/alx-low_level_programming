@@ -1,14 +1,24 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
  * main - entry point
- * __FILE__ - macro to get name of source file to print
+ * @argc: int arguement count
+ * @argv: array of arguements
+ *
  * Return: 0 if successful
  */
 
-int main(void);
+int main(int argc, char *argv[])
 {
-	printf("%s\n", __FILE__);
+	int i;
+
+	printf("Arguement count (argc) is: %d\n", argc);
+
+	for (i = 0; i < argc; i++)
+	{
+		printf("%s\n", argv[i]);
+		printf("The arguements passesd are: \n");
+	}
 	return (0);
+
 }

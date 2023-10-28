@@ -10,12 +10,9 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
+	int num_args = argc;
 
-	printf("Arguement count (argc) is: %d\n", argc);
-	for (i = 0; i < argc; i++)
-	{
-		printf("Number of arguements: %d\n", argc);
-	}
+	printf("Number of arguements: %d\n", num_args);
+
 	return (0);
 }

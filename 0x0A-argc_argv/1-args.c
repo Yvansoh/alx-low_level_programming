@@ -10,9 +10,8 @@
 
 int main(int argc, char *argv[])
 {
-	int num_args = argc - 1;
-
-	printf("Number of arguements: %d\n", num_args);
+	printf("%d\n", argc);
+	print("\n");
 
 	return (0);
 }

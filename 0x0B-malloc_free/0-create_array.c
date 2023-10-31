@@ -1,65 +1,32 @@
 #include "main.h"
-#include <stddef.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * create_array - Entry point of program
+ * create_array - creates an array of characters
  * @size: size of array to create
  * @c: character to initialize array with
  *
- * Return: Null
+ * Return: pointer to array, NULL if fails
  */
 
 char *create_array(unsigned int size, char c)
 {
 	char *array;
+	unsigned int i;
 
 	if (size == 0)
 	{
 		return (NULL);
 	}
 
-	array = malloc(sizeof(char) * size);
+	array = malloc(size * sizeof(char));
+
 	if (array ==  NULL)
 	{
 		return (NULL);
 	}
-	for (unsigned int i = 0; i < size; i++)
-	{
-		array[i] = c;
-	}
+	for (i = 0; i < size; i++)
+	array[i] = c;
 	return (array);
 }
-
-#include <stdio.h>
-#include <stdlib.h>
-
-/**
- * main - Entry point of program
- *
- * Return: 0
- */
-
-char *create_array(unsigned int size, char c);
-
-int main(void)
-{
-	unsigned int size = 10;
-	char character = 'A';
-	char *result = create_array(size, character);
-
-	if (result != NULL)
-	{
-		for (unsigned int i = 0; i < size; i++)
-		{
-			printf("%c ", result[i]);
-		}
-		free(result);
-	}
-	else
-	{
-		printf("Failed to create the array.\n");
-	}
-	return (0);
-}
-

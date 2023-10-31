@@ -36,9 +36,6 @@ char *create_array(unsigned int size, char c)
 
 /**
  * main - Entry point of program
- * create_array - creates an array of characters and initializes with character
- * @size: size of aray to create
- * @c: character to initialize array with
  *
  * Return: 0
  */

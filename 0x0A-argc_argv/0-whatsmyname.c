@@ -10,13 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i;
-
-	printf("Arguement count is: %d\n", argc);
-	for (i = 0; i < argc; i++)
-	{
-		printf("%s\n", argv[0]);
-		printf("The program name is: \n");
-	}
+	(void) argc;
+	printf("%s\n", argv[0]);
 	return (0);
 }

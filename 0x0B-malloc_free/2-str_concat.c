@@ -12,40 +12,33 @@
 
 char *str_concat(char *s1, char *s2)
 {
-char *link;
-int b = 0;
-int ti = 0;
+char *concatenate;
+int s1len = 0;
+int s2len = 0;
+int i;
 
-if (s1 == NULL || s2 == NULL)
-{
-return ("");
-}
+if (s1 == NULL)
+	s1 = " ";
 
-b = ti = 0;
+if (s2 == NULL)
+	s2 = " ";
 
-while (s1[b] != '\0')
-b++;
-while (s2[ti] != '\0')
-ti++;
+for (i = 0; s1[i] != '\0'; i++)
+	s1len++;
 
-link = malloc(sizeof(char) * (b + ti + 1));
-if (link == NULL)
-{
-return (NULL);
-}
-b = ti = 0;
-while (s1[b] != '\0')
-{
-link[b] = s1[b];
-b++;
-}
-while (s2[ti] != '\0')
-{
-link[ti] = s2[ti];
-ti++;
-b++;
-}
-link[b] = '\0';
+for (i = 0; s2[i] != '\0'; i++)
+	s2len++;
 
-return (link);
+concatenate = malloc(sizeof(char) * (s1len + s2len + 1));
+
+if (concatenate == NULL)
+	return (NULL);
+
+for (i = 0; s1[i] != '\0'; i++)
+	concatenate[i] = s1[i];
+
+for (i = 0; s2[i] != '\0'; i++)
+	concatenate[s1len + i] = s2[i];
+
+return (concatenate);
 }

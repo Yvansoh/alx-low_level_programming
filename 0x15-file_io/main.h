@@ -8,6 +8,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <string.h>
+#include <errno.h>
+#include <elf.h>
 #define BUF_SIZE 1024
 
 int _putchar(char c);
